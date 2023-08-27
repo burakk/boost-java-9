@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+/* çerçeve çizgisi 10px , t,r,b,l(cw) , w:200px h:200px  */
+
+.box {
+  border: 10px solid black;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  margin: 50px;
+
+  /*box-sizing: border-box;*/
+}
+
+.box-1 {
+  padding:10px 20px 10px 20px; /* t, r, b, l */
+
+  padding-top:10px;
+  padding-right:20px;
+  padding-bottom:10px;
+  padding-left:20px;
+
+  padding:10px 20px; /* top-bottom, right-left */
+
+  padding:10px; /*  */
+
+  padding:10px 20px 30px;
+}
+
+.box-1 p {
+  background-color: pink;
+}
+
+.regular-wrapper {
+  /* box-sizing: border-box;*/
+}

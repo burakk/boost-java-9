@@ -1,0 +1,45 @@
+* {
+  /* verilen padding ve border miktarını genişlik ve yüksekliğe eklenmemesi için */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+/* pseudo root (html)selector */
+:root {
+  /* custom property */
+  --primary-color: aqua;
+  --secondary-color: orangered;
+}
+
+#root > header {
+  background-color: var(--primary-color);
+  min-height: 40px;
+  padding: 24px;
+}
+
+main {
+  min-height: 400px;
+  padding: 24px;
+}
+
+#stage{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#stage .box {
+  height: 100px;
+  border: 1px solid gray;
+
+  flex-basis:10%;
+  
+}
+
+#root > footer {
+  background-color: var(--primary-color);
+  min-height: 50px;
+  padding: 24px;
+}

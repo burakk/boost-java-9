@@ -1,0 +1,39 @@
+/* at rules */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400;700&display=swap");
+
+h1 {
+  font-size: 24px;
+}
+.box {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+
+  /* vendor prefixes */
+
+  /*
+
+    -moz ( firefox)
+    -o (opera)
+    -ms ( edge )
+    -webkit ( chrome, safari )
+
+  */
+
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -o-border-radius: 16px;
+  -ms-border-radius: 16px;
+  border-radius: 16px;
+}
+
+.container-news {
+  display: flex;
+}
+
+/* @supports rule */
+@supports (display: grid) {
+  .container-news {
+    display: grid;
+  }
+}

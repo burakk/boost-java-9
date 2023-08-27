@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interaction</title>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <button type="button">I am the button</button>
+    <div id="theBox"></div>
+
+    <form action="/newsletter-subscription" method="post">
+      <input type="text" placeholder="Adınız" />
+
+      <button type="submit">Gönder</button>
+      <button type="reset">Temizle</button>
+    </form>
+
+    <nav style="background-color: pink">
+      <ul>
+        <li>
+          <button data-index="0">Hi</button>
+        </li>
+        <li>
+          <button data-index="1">There</button>
+        </li>
+        <li>
+          <button data-index="2">What's</button>
+        </li>
+
+        <li>
+          <button data-index="3">Up</button>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

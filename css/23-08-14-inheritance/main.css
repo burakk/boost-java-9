@@ -1,0 +1,17 @@
+body {
+  background-color: #ffffff;
+  color: red; /* yazı rengi */
+}
+
+a{
+  color:inherit;
+}
+
+
+p{
+  color:blue!important;
+}
+
+/* dark mode light */
+
+

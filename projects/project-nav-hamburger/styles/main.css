@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid gray!important;
+}
+
+
+#root>header{
+  min-height: 100px;
+
+}
+
+main{
+  min-height: calc( 100vh - 200px );
+  
+}
+
+#root>footer{
+  min-height:100px;
+}
+
+/* ---  Component Nav Hamburger --- */
+.nav-hamburger{
+  border-color:red!important;
+  background-color: pink;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+
+.nav-hamburger > ul{
+  display:none;
+}
+
+
+.nav-hamburger.expanded > ul{
+  display:block;
+}
+
+/* Nav Hamburger Toggle Button */
+.nav-hamburger > button {
+  width:40px;
+  height:40px;
+}
+
+.nav-hamburger > button > span{
+  display:block;
+  height:4px;
+  background-color:red;
+  margin-bottom:2px;
+}
+
+.nav-hamburger.expanded > button > span:nth-child(1){
+  transform:rotate(45deg);
+}
+
+.nav-hamburger.expanded > button > span:nth-child(2){
+  display:none;
+}
+
+.nav-hamburger.expanded > button > span:nth-child(3){
+  transform:rotate(-45deg);
+}

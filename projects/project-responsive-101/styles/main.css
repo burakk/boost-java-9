@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid gray !important;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 32px;
+}
+
+.limited-width {
+  max-width: 1000px;
+  border-color: blue !important;
+  margin: 0 auto;
+}
+
+#root > header {
+  background-color: pink;
+  padding: 8px;
+}
+
+main > section {
+  background-color: hsl(250, 50%, 80%);
+  min-height: 200px;
+  padding: 48px;
+}
+
+main > section figure {
+  border: 4px solid red !important;
+  position: relative;
+}
+
+main > section figure figcaption {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px;
+}
+
+main > section figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+main > section li {
+  margin-bottom: 48px;
+}
+
+#root > footer {
+  background-color: black;
+  color: white;
+  padding: 112px;
+}
+
+#root > footer > section {
+  padding: 48px;
+}
+
+/* ---  Component Nav Hamburger --- */
+.nav-hamburger {
+  border-color: red !important;
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-hamburger > ul {
+  display: none;
+}
+
+.nav-hamburger.expanded > ul {
+  display: block;
+}
+
+/* Nav Hamburger Toggle Button */
+.nav-hamburger > button {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-hamburger > button > span {
+  display: block;
+  height: 4px;
+  background-color: red;
+  margin-bottom: 2px;
+}
+
+.nav-hamburger.expanded > button > span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.nav-hamburger.expanded > button > span:nth-child(2) {
+  display: none;
+}
+
+.nav-hamburger.expanded > button > span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 1000px) {
+  #root > header > .limited-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main > section > ul {
+    display: flex;
+    gap: 16px;
+  }
+
+  main > section > ul > li {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  /*  footer içindeki 4 bölüm için: Her bir satırda iki kolon olacak şekilde düzenleyin  */
+  #root > footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #root > footer section {
+    flex-basis: 50%;
+  }
+
+  /* toggle butonu sakla, menüyü göster, menü logonu satırında ve en sağda durusun */
+  .nav-hamburger > button {
+    display: none;
+  }
+
+  .nav-hamburger > ul {
+    display: flex !important;
+  }
+
+  .nav-hamburger {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #root > footer section {
+    flex-basis: 25%;
+  }
+}

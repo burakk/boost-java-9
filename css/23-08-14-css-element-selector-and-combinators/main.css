@@ -1,0 +1,35 @@
+p {
+  color: red;
+}
+
+div {
+  border: 1px solid red;
+}
+
+header {
+  border: 1px solid blue;
+}
+
+main {
+  border: 5px solid black;
+}
+
+/* --- combine with space: selector selector  --- */
+main p {
+  font-weight: bold;
+}
+
+/* --- combine with '>': selector selector  --- */
+main article > strong {
+  font-size: 24px;
+}
+
+/* --- combine with '+': selector + selector  --- */
+
+/* --- combine with '~': selector ~ selector  --- */
+
+footer {
+  border: 1px solid blue;
+}
+
+/* main elemanının altındaki p elemanı */

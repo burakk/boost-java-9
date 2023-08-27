@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+/*  Carousel Component */
+.carousel {
+  border: 10px solid hsl(120, 14%, 1%);
+  width: 50vw;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel > .slider {
+  border: 10px solid blue;
+  width: 200%;
+  height: 100%;
+  display: flex;
+  margin-left: -100%;
+  transition: margin-left 500ms ease-in-out;
+}
+
+.carousel > .slider > .slide {
+  border: 2px solid black;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.carousel > .slider > .slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel > nav {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.carousel > nav > button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+}
+
+.carousel > nav > button[aria-selected="true"] {
+  background-color: black;
+  border: 2px solid white;
+}

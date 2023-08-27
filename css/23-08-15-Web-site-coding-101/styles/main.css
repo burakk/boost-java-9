@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400;700&display=swap");
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/*  element name selector */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 100;
+  color: red;
+}
+
+div {
+  border: 2px solid black;
+}
+
+header {
+  border: 2px solid blue;
+}
+
+header nav {
+  background-color: aqua;
+}
+
+main {
+  border: 2px solid red;
+}
+
+footer {
+  border: 2px solid blue;
+}
+
+footer nav {
+  background-color: pink;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renkli Kutular</title>
+
+    <link rel="stylesheet" href="reset.css" />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <h1>Hesap Makinesi 101</h1>
+      </header>
+      <main>
+        <form id="frm-calculator-101" action="calc.php">
+          <label for="a">Sayı 1</label>
+          <input type="text" name="a" id="a" placeholder="Sayı giriniz" />
+
+          <label for="b">Sayı 2</label>
+          <input type="text" name="b" id="b" placeholder="Sayı giriniz" />
+
+          <button type="submit">Topla</button>
+
+          <!--- html entities for special characters < (&lt;) 
+          https://www.w3schools.com/html/html_entities.asp
+        -->
+          <p id="msg-to-user">: &lt;</p>
+        </form>
+      </main>
+      <footer>Java-9</footer>
+    </div>
+  </body>
+</html>

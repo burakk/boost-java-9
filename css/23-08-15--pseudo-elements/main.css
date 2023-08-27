@@ -1,0 +1,38 @@
+/* Card Component */
+.card {
+  border: 2px solid black;
+  width: 200px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.card > header {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+.card > .content {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+.card > footer {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+.card.favorite::before {
+  content: "***";
+  color: red;
+}
+
+
+.card::after {
+  content: "Hello after";
+  color: blue;
+}
+
+
+
+
+

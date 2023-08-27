@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+/* --- display:inline --- */
+a {
+  border: 1px solid blue;
+  text-decoration: none;
+  /* display özelliğinin değeri inline olan öğelerin özellikleri  */
+  display: inline;
+
+  /* yanyana satır ekseninde dizilmeye uygun*/
+
+  /* width, height verilemez */
+  width: 1000px;
+  height: 1000px;
+
+  /* default width değeri auto'dur */
+
+  /* default height değeri font ailesinin satır yüksekliğine (line-height) bağlı */
+
+  /* default text-align left */
+
+  /*  Kapsayıcılarından birinin text-align özelliğinin değeri left,right, auto, justify yapılarak hizalanabilirler */
+}
+
+/* ---  display:block  --- */
+div {
+  border: 1px solid blue;
+  display: block;
+
+  /* default width 100% */
+  /* default height auto */
+
+  width: 300px;
+  height: 200px;
+
+  /*  block öğelerin sağ-sol marginleri auto yapılarak ortalanabilirler */
+  margin: 0 auto;
+}
+
+/* --- display:inline-block -> width ve height verebildiğiniz bir inline eleman --- */
+
+input[type="text"] {
+  width: 200px;
+  padding: 8px;
+}
+
+img {
+  width: 200px;
+  height: 50px;
+}
+
+/* --- display:none -Dökümanda görünmez ve yer kaplamazlar --- */

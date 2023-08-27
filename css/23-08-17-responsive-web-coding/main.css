@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: orange;
+  color: red;
+}
+
+/* @rules - @import, @supports */
+
+@media screen and (min-width: 700px) {
+  body {
+    background-color: limegreen;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: pink;
+  }
+}

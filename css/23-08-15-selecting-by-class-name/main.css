@@ -1,0 +1,28 @@
+p {
+  color: gray;
+}
+
+/* fb sınıfının üyesi html elemanları */
+.fb {
+  color: blue;
+}
+
+/* vip sınıfının üyesi html elemanları */
+.vip {
+  font-weight: bold;
+}
+
+/* gs sınıfının üyesi html elemanları */
+.gs {
+  color: red;
+}
+
+/* fb sınıfının üyesi strong elemanları */
+strong.fb {
+  font-size: 40px;
+}
+
+/* fb ve old sınıfının üyesi strong elemanları */
+strong.fb.old {
+  font-style: italic;
+}

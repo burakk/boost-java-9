@@ -1,0 +1,43 @@
+li {
+  border-bottom: 1px dotted black;
+  padding: 24px;
+  margin-bottom: 8px;
+}
+
+.list-1 li:first-child {
+  color: red;
+}
+.list-1 li:last-child {
+  color: blue;
+}
+
+.list-2 li:nth-child(even) {
+  font-weight: bold;
+}
+
+.list-2 li:nth-child(odd) {
+  font-style: italic;
+}
+
+.list-3 li:nth-child(n + 2) {
+  color: red;
+}
+
+/*ul'nin içindeki  ebeveyninin ilk çocuğu olan li*/
+ul li:first-child {
+  color: yellow;
+}
+
+ul li:nth-of-type(1) {
+  color: yellow;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+}
+
+.box:hover {
+  background-color: pink;
+}

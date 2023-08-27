@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- Logo --- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+.logo i {
+  font-size: 32px;
+}
+
+:root {
+  /* Custom Properties */
+  --primary-accent-color: #00ff00;
+  --secondary-accent-color: #0c67d3;
+  --neutral-black: #000;
+  --neutral-white: #fff;
+  --neutral-gray1: #2b2b2b;
+
+  --transition-fast-dur: 200ms;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* --- Helper classes --- */
+
+.limited-width-container {
+  max-width: 1000px;
+  border: 4px solid red;
+  margin: 0 auto;
+}
+
+#root {
+  border: 1px solid black;
+}
+
+/* --- Header styles --- */
+#root > header {
+  border: 1px solid red;
+  background-color: var(--neutral-black);
+  color: var(--neutral-white);
+}
+
+/* --- MainSection styles --- */
+
+main {
+  border: 1px solid blue;
+  min-height: 600px;
+}
+
+/* --- Footer styles --- */
+
+#root > footer {
+  border: 1px solid red;
+  background-color: var(--neutral-black);
+  color: var(--neutral-white);
+}
+
+#root > footer section {
+  border: 2px solid blue;
+}
+
+#root > footer section > nav {
+  border: 4px dotted red;
+}
+
+/* --- Banners --- */
+.banner {
+  background-color: var(--secondary-accent-color);
+  min-height: 400px;
+  color: var(--neutral-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Navigations --- */
+
+.nav-social > ul {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-social li {
+  border: 4px solid pink;
+}
+
+.nav-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--neutral-gray1);
+  font-size: 24px;
+}
+
+.nav-social a:hover {
+  color: var(--primary-accent-color);
+}
+
+/*  nav hamburger */
+.nav-hamburger {
+  border: 10px solid orangered;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: 400px;
+}
+
+.nav-hamburger > ul {
+  background-color: pink;
+  padding: 112px 24px 24px;
+  position: absolute;
+  right: -100px;
+  opacity: 0;
+  height: 100vh;
+  width: 300px;
+
+  /*  property, duration, easing, delay */
+  transition: right 1s ease-in-out 0;
+
+  transition-property: right;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0;
+}
+
+.nav-hamburger.expanded > ul {
+  right: 0;
+  opacity: 1;
+}
+
+.nav-hamburger > ul > li {
+  background-color: black;
+
+  border: 1px solid white;
+}
+
+.nav-hamburger > ul > li > a {
+  border: 2px solid aqua;
+  display: block;
+  padding: 24px;
+}
+
+.nav-hamburger-btn-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--neutral-black);
+  padding: 8px;
+  border: 2px solid blue;
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 24px;
+}
+
+.nav-hamburger-btn-toggle span {
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--neutral-white);
+}
+
+.nav-hamburger.expanded .nav-hamburger-btn-toggle span:nth-child(1) {
+  transform: translate(0px, 8px) rotate(45deg);
+}
+
+.nav-hamburger.expanded .nav-hamburger-btn-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.expanded .nav-hamburger-btn-toggle span:nth-child(3) {
+  transform: translate(0px, -5px) rotate(-45deg);
+}
+
+/* --- Responsive Breakpoints --- */
+
+@media screen and (min-width: 750px) {
+  #root > footer section:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #root > footer > .limited-width-container {
+    display: flex;
+  }
+
+  #root > footer section {
+    flex-basis: 0;
+  }
+
+  #root > footer section:nth-of-type(1) {
+    flex-grow: 1;
+  }
+
+  #root > footer section:nth-of-type(2) {
+    flex-grow: 6;
+    justify-content: space-around;
+  }
+
+  #root > footer section:nth-of-type(3) {
+    flex-grow: 3;
+  }
+
+  /* --- Navigations --- */
+  .nav-social > ul {
+    justify-content: flex-end;
+  }
+}

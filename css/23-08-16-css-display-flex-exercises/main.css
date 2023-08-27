@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+#root {
+  border: 2px solid black;
+}
+
+#root > header {
+  border: 2px solid blue;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#root > header > a {
+  border: 2px solid red;
+}
+
+#root > header > nav {
+  border: 2px solid red;
+}
+
+#root > header > nav > ul {
+  display: flex;
+}
+
+main {
+  border: 2px solid red;
+  padding: 16px;
+}
+
+main > section {
+  margin-bottom: 48px;
+}
+
+main > .section-featured-works ul {
+  border: 2px solid red;
+  display: flex;
+  gap: 24px;
+}
+
+main > .section-featured-works ul li {
+  border: 2px solid blue;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+main > .section-latest-posts > ul {
+  border: 2px solid blue;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+main > .section-latest-posts > ul > li {
+  border: 2px solid red;
+  flex-basis: calc((100% - 24px) / 4);
+}
+
+#root > footer {
+  border: 2px solid blue;
+  padding: 16px;
+}
+
+/* row - col */
+.row,
+.col {
+  border: 2px solid red;
+}
+.row {
+  border-color: blue;
+  display: flex;
+  column-gap: 8px;
+}
+.row > .col {
+  /*
+  flex-grow:1;
+  flex-shrink:1;
+  flex-basis:0;
+  */
+  flex: 1 1 0;
+}
