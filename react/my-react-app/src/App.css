@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: yellow;
+  --secondary-clr: #444;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+#root > header {
+  padding: 24px;
+}
+
+main {
+  padding: 24px;
+}
+
+#root > footer {
+  padding: 24px;
+  background-color: var(--secondary-clr);
+  color: white;
+}
+
+.basic-header {
+  background-color: var(--primary-clr);
+}
+
+/* 
+
+--- Menus ---
+
+*/
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav ul li {
+  border: 2px solid black;
+}
+
+.main-nav a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav a:hover {
+  background-color: black;
+  color: white;
+}
