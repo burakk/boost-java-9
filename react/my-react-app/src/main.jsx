@@ -9,12 +9,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
-
 */
 
 import { createRoot } from "react-dom/client";
 
 import App from "./App";
+import { StrictMode } from "react";
 
 // react root'u haline getirmek istediğin sıradan html elemanını seç
 const rootEl = document.getElementById("root");
@@ -22,7 +22,12 @@ const rootEl = document.getElementById("root");
 //react root'u oluştur
 const root = createRoot(rootEl);
 
-root.render(<App />);
+root.render(
+  /*  StrictMode komponentlerinizin saflığını kontrol edebilmeniz için kullanılır */
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
 
 <h2>Hello</h2>; // jsx tag ( js extended ) js içerinde html'e çok benzeyen kod yazabilmen için
 
