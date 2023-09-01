@@ -1,28 +1,37 @@
 import { Logo } from "./components/Logo";
 import { NavMain } from "./components/NavMain";
-import { iconGithub } from "./components/Icons";
+import { NavSocial } from "./components/NavSocial";
+
+import { Page01 } from "./pages/Page01-Component-Memory";
+
+import { Page02 } from "./pages/Page02";
+
+import { Page03 } from "./pages/Page03";
+
+import "./assets/styles/reset.css";
+import "./App.css";
+
+import { useState } from "react";
 
 export default function App() {
+  const [url, setUrl] = useState("01");
+
   return (
     <>
       <header>
         <Logo />
 
-        <NavMain />
+        <NavMain setUrl={setUrl} url={url} />
       </header>
-      <main>
-        <section>
-          <h1>Bir komponentin hafızası</h1>
-        </section>
+      <main className="limited-width">
+        {url === "01" && <Page01 />}
+
+        {url === "02" && <Page02 />}
+
+        {url === "03" && <Page03 />}
       </main>
       <footer>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">{iconGithub}</a>
-            </li>
-          </ul>
-        </nav>
+        <NavSocial />
       </footer>
     </>
   );
