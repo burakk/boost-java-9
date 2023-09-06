@@ -89,13 +89,27 @@ form {
   gap: var(--spacing-md);
 }
 
-form input[type="text"], form input[type="email"] {
+form input[type="text"],
+form input[type="email"] {
   height: 40px;
   font-size: 1.2rem;
 }
 
 form button {
   height: 40px;
+}
+
+nav a {
+  display: flex;
+  height: 32px;
+  border: 1px dotted black;
+  align-items: center;
+  padding-left: 24px;
+}
+
+nav a.active {
+  background-color: black;
+  color: white;
 }
 
 @media screen and (min-width: 1024px) {

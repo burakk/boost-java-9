@@ -1,0 +1,22 @@
+.Board {
+  border: 1px solid gray;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 32px;
+}
+
+.Board > div {
+  border: 1px solid gray;
+  height: 33.3333%;
+  flex-basis: 33.3333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Message {
+  background-color: pink;
+  padding: 24px;
+}

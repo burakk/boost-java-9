@@ -1,15 +1,26 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function NavMain() {
   return (
     <nav>
-      Ben nav
       <ul>
         <li>
-          <Link to="/">Ana sayfa</Link>
+          <NavLink to="/">Ana sayfa</NavLink>
         </li>
         <li>
-          <Link to="/egzersiz-1">Egzersiz 1</Link>
+          <NavLink to="/egzersiz-1">Egzersiz 1</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/egzersiz-2">Egzersiz 2</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/egzersiz-3">Egzersiz 3</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/egzersiz-4">Egzersiz 4</NavLink>
         </li>
       </ul>
     </nav>
